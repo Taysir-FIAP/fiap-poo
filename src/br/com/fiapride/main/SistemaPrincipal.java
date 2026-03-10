@@ -47,25 +47,28 @@ public class SistemaPrincipal {
 	 //Micro Desafio
 	 
 	 // Criando o primeiro Carro (Objeto 1)
-     /*Carro carro1 = new Carro();
-     carro1.marca = "BYD";
-     carro1.tipoMotorizacao = "Elétrico";
-     carro1.preco = 1000.00;
+     Carro carro1 = new Carro("BYD", "Elétrico", 1000.00, 15);
 	 
-     Carro carro2 = new Carro();
-     carro2.marca = "Volkswagen";
-     carro2.tipoMotorizacao = "Combustivel";
-     carro2.preco = 1500.00;
+     Carro carro2 = new Carro("Volkswagen", "Combustão", 1500.00, 50);
      
-     Carro carro3 = new Carro();
-     carro3.marca = "BMW";
-     carro3.tipoMotorizacao = "Híbrido";
-     carro3.preco = 2500.00;
+     Carro carro3 = new Carro("BMW", "Híbrido", 2500.00, 80);
      
      // Exibindo os dados no Console
      System.out.println("--- Sistema FiapRide ---");
      System.out.println("Carro: " + carro1.marca + " | Tipo do Motor: " + carro1.tipoMotorizacao + " | Preço: R$" + carro1.preco);
      System.out.println("Carro: " + carro2.marca + " | Tipo do Motor: " + carro2.tipoMotorizacao + " | Preço: R$" + carro2.preco);
-     System.out.println("Carro: " + carro3.marca + " | Tipo do Motor: " + carro3.tipoMotorizacao + " | Preço: R$" + carro3.preco);*/
+     System.out.println("Carro: " + carro3.marca + " | Tipo do Motor: " + carro3.tipoMotorizacao + " | Preço: R$" + carro3.preco);
+
+     // Chamando os métodos
+     System.out.println("\n--- Teste de ações dos carros ---");
+
+     carro1.dirigir(5);
+     carro1.precisaAbastecer(carro1.tipoMotorizacao);
+
+     carro2.dirigir(20);
+     carro2.precisaAbastecer(carro2.tipoMotorizacao);
+
+     carro3.dirigir(10);
+     carro3.precisaAbastecer(carro3.tipoMotorizacao);
  }
 }

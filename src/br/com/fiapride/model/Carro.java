@@ -23,34 +23,61 @@ public class Carro {
  		// "this." serve para se referir a variavel da classe
  	}
  	
- 	public void precisaAbastecer(String textoTipoMotorizazao) {
-        // Regra de negócio: O valor da recarga deve ser positivo
-        if (this.textoTipoMotorizazao == "elétrico") {
-        	this.nivelBateria = this.tanquePorcentagem;
-        	if (this.nivelBateria <= 20)
-            System.out.println("É necessário carregar o veículo em " + (100 - this.nivelBateria) + "%!");
-            return; // Interrompe a execução do método
-        }
-        if (this.textoTipoMotorizazao == "combustão") {
-        	this.nivelCombustivel = this.tanquePorcentagem;
-        	if (this.nivelCombustivel <= 20)
-        		System.out.println("É necessário reabastecer o veículo!");
-            return; // Interrompe a execução do método
-        }
-        
-    }
+	public void precisaAbastecer(String textoTipoMotorizazao) {
+
+	    if (this.textoTipoMotorizazao == "elétrico") {
+	        this.nivelBateria = this.tanquePorcentagem;
+
+	        if (this.nivelBateria <= 20)
+	            System.out.println("É necessário carregar o veículo em " + (100 - this.nivelBateria) + "%!");
+	        return;
+	    }
+
+	    if (this.textoTipoMotorizazao == "combustão") {
+	        this.nivelCombustivel = this.tanquePorcentagem;
+
+	        if (this.nivelCombustivel <= 20)
+	            System.out.println("É necessário reabastecer o veículo!");
+	        return;
+	    }
+	}
  	
- 	/*public void fazerViagem() {
-        // Regra de negócio: O custo deve ser positivo e o saldo deve ser suficiente
-        if (custo <= 0) {
-            System.out.println("Erro: O custo da viagem é inválido.");
-            return;
-        }
-        if (this.saldo < custo) {
-            System.out.println("Erro: Saldo insuficiente para realizar a viagem.");
-            return;
-        }
-        this.saldo -= custo;
-        System.out.println("Viagem paga. Saldo restante: " + this.saldo);
-    }*/
+	public void dirigir(int consumo) {
+
+	    if (this.textoTipoMotorizazao.equals("elétrico")) {
+	        this.nivelBateria = this.tanquePorcentagem - consumo;
+
+	        if (this.nivelBateria < 0) {
+	            this.nivelBateria = 0;
+	        }
+
+	        System.out.println("O carro " + this.marca + " (elétrico) dirigiu e agora a bateria está em " + this.nivelBateria + "%");
+	        this.tanquePorcentagem = this.nivelBateria;
+	        return;
+	    }
+
+	    if (this.textoTipoMotorizazao.equals("combustão")) {
+	        this.nivelCombustivel = this.tanquePorcentagem - consumo;
+
+	        if (this.nivelCombustivel < 0) {
+	            this.nivelCombustivel = 0;
+	        }
+
+	        System.out.println("O carro " + this.marca + " (combustão) dirigiu e agora o combustível está em " + this.nivelCombustivel + "%");
+	        this.tanquePorcentagem = this.nivelCombustivel;
+	        return;
+	    }
+
+	    if (this.textoTipoMotorizazao.equals("híbrido")) {
+	        int nivel = this.tanquePorcentagem - consumo;
+
+	        if (nivel < 0) {
+	            nivel = 0;
+	        }
+
+	        System.out.println("O carro " + this.marca + " (híbrido) dirigiu e agora a energia está em " + nivel + "%");
+	        this.tanquePorcentagem = nivel;
+	        return;
+	    }
+	}
 }
