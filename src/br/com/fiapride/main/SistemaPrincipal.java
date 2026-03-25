@@ -11,7 +11,7 @@ public class SistemaPrincipal {
      // INSTANCIAÇÃO
      // O comando 'new' aloca memória para um novo objeto.
      // Criando o primeiro passageiro (Objeto 1)
-     /*Passageiro passageiro1 = new Passageiro("Ana Silva", "222.222");
+     Passageiro passageiro1 = new Passageiro("Ana Silva", "222.222");
 	 System.out.println("Recarga passageiro 1");
      passageiro1.adicionarSaldo(50.0);
 
@@ -39,7 +39,7 @@ public class SistemaPrincipal {
      passageiro2.pagarViagem(500);
      System.out.println("\nPagando viagem do passageiro 3");
      passageiro3.pagarViagem(20);
-     */
+
      
      
      // Teste mental: Se eu mudar o nome do passageiro1, o passageiro2 muda?
