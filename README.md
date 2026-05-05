@@ -1,2 +1,2 @@
 # fiap-poo
-xercícios de POO.
+Exercícios de POO.
