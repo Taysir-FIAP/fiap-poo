@@ -19,7 +19,7 @@ public class SistemaPrincipal {
         passageiro2.saldo = 12.50;
 
         // Exibindo os dados no Console
-        System.out.println("--- Sistema FiapRide ---");
+        System.out.println("--- Sistema FiapRide  ---");
         System.out.println("Passageiro: " + passageiro1.nome + " | Saldo: R$" + passageiro1.saldo);
         System.out.println("Passageiro: " + passageiro2.nome + " | Saldo: R$" + passageiro2.saldo);
 
